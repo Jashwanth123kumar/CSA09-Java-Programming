@@ -1,0 +1,12 @@
+package java2;
+import java.util.*;
+public class sqrrootcubroot {
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		System.out.print("Enter the number :");
+		int n=s.nextInt(); 
+		System.out.println("square root of  "+n+" is "+(n*n)); 
+		System.out.println("cube root of  "+n+" is "+(n*n*n)); 
+	}
+
+}
