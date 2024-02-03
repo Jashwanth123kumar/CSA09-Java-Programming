@@ -1,0 +1,39 @@
+package exam;
+import java.util.Scanner;
+public class consonants {
+	    public static void main(String[] args) {
+	        Scanner s = new Scanner(System.in);
+	        System.out.print("Enter the number of elements: ");
+	        int n = s.nextInt();
+	        int A[] = new int[n];
+	        System.out.println("Enter elements of the array: ");
+	        for (int i = 0; i < n; i++) {
+	            A[i] = s.nextInt();
+	        }
+	        int count = countCompositeNumbers(A);
+	        System.out.println("Number of composite numbers in the array: " + count);
+	    }
+	    static boolean isComposite(int num) {
+	        if (num <= 1) {
+	            return false;
+	        }
+	        for (int i = 2; i <= Math.sqrt(num); i++) {
+	            if (num % i == 0) {
+	                return true;
+	            }
+	        }
+	        return false;
+	    }
+	    static int countCompositeNumbers(int[] array) {
+	        int count = 0;
+	        for (int num : array) {
+	            if (isComposite(num)) {
+	                count++;
+	            }
+	        }
+	        return count;
+	    }
+	}
+
+
+
