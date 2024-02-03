@@ -1,0 +1,39 @@
+package exam;
+import java.util.Scanner;
+public class vowels {
+	public static void main(String[] args)
+	{
+	    Scanner s=new Scanner(System.in); 
+		System.out.print("Enter the String : ");
+		String name=s.nextLine(); 
+		int len=name.length(); 
+		char a[]=new char[len]; 
+		char vow[]=new char[len]; 
+		char con[]=new char[len]; 
+		int vowl=0,cons=0; 
+		for(int i=0;i<len;i++) 
+		{ 
+		    a[i]=name.charAt(i); 
+		    if(a[i]=='a'||a[i]=='e'||a[i]=='i'||a[i]=='o'||a[i]=='u' ||a[i]=='A'||a[i]=='E'||a[i]=='I'||a[i]=='O'||a[i]=='U')  
+		    {  vow[vowl] = a[i]; 
+		    vowl++; 
+		    }
+		    else { 
+		    con[cons] = a[i]; 
+				        cons++; 
+				    } 
+				} 
+				System.out.print("Vowels : "); 
+				for(int i=0;i<vowl;i++) 
+				{ 
+				    System.out.print(vow[i]); 
+				} 
+				System.out.print("\nConstants : "); 
+				for(int j=0;j<cons;j++) 
+				{ 
+				    System.out.print(con[j]); 
+				}
+			}	
+	}
+
+
